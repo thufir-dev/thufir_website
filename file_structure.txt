@@ -1,0 +1,14 @@
+thufir-website/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── hero-bg.png
+│   │   └── screenshots/
+│   └── videos/
+│       └── demos/
+└── README.md 
