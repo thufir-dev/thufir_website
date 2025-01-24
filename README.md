@@ -1,6 +1,6 @@
 # Thufir - AI-Powered Server Monitoring for VS Code
 
-![Thufir](resources/thufir_readme.png)
+![Thufir](images/logo.png)
 
 Thufir is an open-source VS Code extension that combines server monitoring with AI assistance and agents to help developers manage and troubleshoot their servers efficiently.
 
