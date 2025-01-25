@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,16 @@
     <meta name="description" content="Intelligent server monitoring VS Code extension with AI assistance for efficient server management and troubleshooting">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Add Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon setup -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#B4A186">
-    <meta name="msapplication-TileColor" content="#B4A186">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#6C63FF">
+    <meta name="msapplication-TileColor" content="#6C63FF">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
@@ -28,7 +30,17 @@
                 <a href="#features">Features</a>
                 <a href="#demo">Demo</a>
                 <a href="https://docs.thufir.dev">Documentation</a>
-                <a href="https://github.com/thufir-dev/thufir" class="github-link">GitHub</a>
+                <a href="https://github.com/thufir-dev/thufir" class="github-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider">
+                        <i class="fas fa-sun icon sun-icon"></i>
+                        <i class="fas fa-moon icon moon-icon"></i>
+                    </span>
+                </label>
             </div>
         </div>
     </nav>
@@ -36,11 +48,21 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <h1>Server Monitoring,<br>Powered by AI</h1>
-            <p class="subtitle">Monitor, analyze, and optimize your servers with intelligent insights, right in VS Code. No context switching needed.</p>
-            <div class="cta-buttons">
-                <a href="#" class="primary-btn">Install Extension</a>
-                <a href="#features" class="secondary-btn">Learn More</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Server Monitoring,<br>Powered by AI</h1>
+                    <p>Monitor, analyze, and optimize your servers with intelligent insights, right in VS Code. No context switching needed.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            Install Extension
+                        </a>
+                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image floating">
+                    <img src="assets/images/hero-dashboard.png" alt="Thufir Dashboard">
+                </div>
             </div>
         </div>
     </header>
@@ -48,39 +70,38 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2>Everything you need for server management</h2>
+            <div class="section-header">
+                <h2>Everything you need for server management</h2>
+                <p>Powerful features designed to make server monitoring and management effortless</p>
+            </div>
             <div class="feature-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
                     <h3>Server Management</h3>
-                    <ul>
-                        <li>✓ Multi-server SSH support</li>
-                        <li>✓ Real-time metrics monitoring</li>
-                        <li>✓ System resource tracking</li>
-                    </ul>
+                    <p>Multi-server SSH support with real-time metrics monitoring and system resource tracking</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Prometheus Integration</h3>
-                    <ul>
-                        <li>✓ Local/remote instance connection</li>
-                        <li>✓ Custom metrics analysis</li>
-                        <li>✓ Alert management</li>
-                    </ul>
+                    <p>Connect to local or remote Prometheus instances for custom metrics analysis and alert management</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <h3>AI Assistant</h3>
-                    <ul>
-                        <li>✓ Multiple LLM providers</li>
-                        <li>✓ Intelligent analysis</li>
-                        <li>✓ Quick troubleshooting</li>
-                    </ul>
+                    <p>Multiple LLM providers for intelligent analysis and quick troubleshooting assistance</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>SRE Tools</h3>
-                    <ul>
-                        <li>✓ Performance analysis</li>
-                        <li>✓ Security auditing</li>
-                        <li>✓ Backup planning</li>
-                    </ul>
+                    <p>Performance analysis, security auditing, and backup planning tools at your fingertips</p>
                 </div>
             </div>
         </div>
@@ -89,7 +110,10 @@
     <!-- Demo Section -->
     <section id="demo" class="demo">
         <div class="container">
-            <h2>See it in action</h2>
+            <div class="section-header">
+                <h2>See it in action</h2>
+                <p>Watch how Thufir simplifies server monitoring and management</p>
+            </div>
             <div class="demo-content">
                 <div class="demo-video">
                     <video controls>
@@ -103,23 +127,30 @@
     <!-- Getting Started -->
     <section class="getting-started">
         <div class="container">
-            <h2>Get started in minutes</h2>
-            <div class="install-steps">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <p>Install from VS Code Marketplace</p>
+            <div class="section-header">
+                <h2>Get started in minutes</h2>
+                <p>Follow these simple steps to start monitoring your servers</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Install Extension</h3>
+                    <p>Get Thufir from the VS Code Marketplace</p>
                 </div>
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <p>Add your servers via SSH</p>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Add Servers</h3>
+                    <p>Connect your servers via SSH configuration</p>
                 </div>
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <p>Configure your AI provider</p>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Configure AI</h3>
+                    <p>Set up your preferred AI provider</p>
                 </div>
-                <div class="step">
-                    <span class="step-number">4</span>
-                    <p>Start monitoring!</p>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Start Monitoring</h3>
+                    <p>Begin monitoring and optimizing your servers</p>
                 </div>
             </div>
         </div>
@@ -134,7 +165,17 @@
                     <a href="https://github.com/thufir-dev/thufir">GitHub</a>
                     <a href="https://github.com/thufir-dev/thufir/issues">Support</a>
                 </div>
-                <p class="copyright">© 2024 Thufir. Created by Evangelos Meklis</p>
+                <div class="social-links">
+                    <a href="https://github.com/thufir-dev" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/thufir_dev" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://discord.gg/thufir" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
